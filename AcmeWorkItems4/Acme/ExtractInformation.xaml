@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1096,1637</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1096,1512</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,19 +110,19 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractInformation" sap:VirtualizedContainerService.HintSize="512,1572" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractInformation" sap:VirtualizedContainerService.HintSize="512,1447" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,1190" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Background" OpenMode="Never" ScopeGuid="26e60bd4-fe84-4f1f-a885-99b03956b4e9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,1065" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Background" OpenMode="Never" ScopeGuid="26e60bd4-fe84-4f1f-a885-99b03956b4e9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,933" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,808" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,7 +140,6 @@
                 </ui:Target>
               </ui:Activate.Target>
             </ui:Activate>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,125" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;aici&quot;]" />
             <uix:NGetText DisplayName="Get Client Id" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="26e60bd4-fe84-4f1f-a885-99b03956b4e9" ScrapingMethod="Fulltext" TextString="[out_ClientId]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="232, 413, 67, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name=' RW82952' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="510681ba-834f-4f95-9dea-9f29e6f12442" InformativeScreenshot="60e3a548d8f284e043cbd0d5da09732d.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='ACME System 1 - Work Items — Mozilla Firefox' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
