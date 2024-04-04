@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>988,2333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1096,2458</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Acme_Close_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +116,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Acme_Close" sap:VirtualizedContainerService.HintSize="708,2268" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Acme_Close" sap:VirtualizedContainerService.HintSize="708,2393" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="exists" />
     </Sequence.Variables>
@@ -125,20 +125,32 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646,2180" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646,2305" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Firefox: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="608,1929" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="64c3c230-4a7c-407a-9bbe-7a0493b4eed4" Timeout="5" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Firefox: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="608,2054" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="64c3c230-4a7c-407a-9bbe-7a0493b4eed4" Timeout="5" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,1712" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,1837" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:Activate DelayBefore="{x:Null}" DelayMS="1" sap:VirtualizedContainerService.HintSize="512,127" sap2010:WorkflowViewState.IdRef="Activate_1">
+                  <ui:Activate.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9f5d0550-e330-4259-8aa8-a951b3e03fc0">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Activate.Target>
+                </ui:Activate>
                 <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayAfter="2" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="512,197" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64c3c230-4a7c-407a-9bbe-7a0493b4eed4" Timeout="3" Version="V3">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items" CvTextArea="1486, 111, 53, 16" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1472, 93, 81, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log Out' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' tag='A' type='' class='' check:text='Log Out' /&gt;" Guid="931b7fb1-9716-461d-95bd-55677b77c046" InformativeScreenshot="c5fa1ebe63fbd1904c8de1ccacce8431.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
