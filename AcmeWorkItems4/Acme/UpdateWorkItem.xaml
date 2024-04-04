@@ -3,11 +3,12 @@
     <x:Property Name="in_Comment" Type="InArgument(x:String)" />
     <x:Property Name="in_Status" Type="InArgument(x:String)" />
     <x:Property Name="in_Actions_URL" Type="InArgument(x:String)" />
+    <x:Property Name="in_ACME_URL" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1096,2092</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1182,2094</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,24 +113,25 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UpdateWorkItem" sap:VirtualizedContainerService.HintSize="512,2027" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UpdateWorkItem" sap:VirtualizedContainerService.HintSize="512,2029" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,651" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e5015098-b05d-44dc-a3d5-45a5ec3b894b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,733" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="e5015098-b05d-44dc-a3d5-45a5ec3b894b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,394" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,516" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Actions_URL]" Version="V3" />
             <ui:Activate DelayBefore="{x:Null}" DelayMS="2" sap:VirtualizedContainerService.HintSize="354,127" sap2010:WorkflowViewState.IdRef="Activate_3">
               <ui:Activate.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="931311b0-4e7f-4fc4-a964-df326051d1dc">
@@ -151,7 +153,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-1525, 358, 1275, 674" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEAElEQVR42r3TW4hVVRjA8f+31t5n5syMdkancogyNfOGmmkQWZIEBZERiqlgEAk9RI8RUVZ080Lmgy9iPRQ+9CKYlBFI4q0E0Ya0GAMvqdGMMpfj3M6Z2XuvtRoP+5wzDrPNaeb0g7XZD5vNf62PJWxqugzUA47/lwCdHnAfRS5+iFAZDpyAUDTBA64DGQAiC4GpVEB5gzU+aMBSOAGFAL0RzyyYtGflnMx3l7JBreW/UYAFjIWUpsA4cA7qq3XQloumbT9+dSMB4Il4AFhAQ62vdwEHqbCUrzYGfRH4GkWRJ1wfMHOpsLmTq+dYAEWBoshClRbLOHlj6ZTpB850/Hy8JbcLyoxxZtjIyizjY8uyxoZ7tp+5cKo5+9jhQy2v+p76llhfaEgM8IWSr3/v/HzHibamrYdbmpqu5XeQ4Ifz3Ue3Hmk5ufNU25ltx65uADhyNf+sOZeFmRlIaz4+1rqCmEWSA0Qoac9F6/O5cBGDK5uL1pKgIx89QS5c0p0L5xvjHoeC3TMenQIXuiCy7F09/UMSKBKktDqNFtAK35PfSFClxaAVaKH+Dv8SZfLuqumr3lo/ax7wPrE6X91eAA5FmSKZwlEQhE642V6geemUOiGmVOIIxi40liITWrftp1a34+jfbslXZ7cTqx73AMER01pR1NEfke8OyQ2ua31RSEwrxjkAhBFkqjRUa0hrJlXrHDHHOAcII3Ou+BK/j/YWiHC7HGOgknbTH1pBAIHI4kjgKwwAAvnAyJgCrKPE96UG6yC0TEypARL0Rc5HCxiordY1YwroDh1FK2dnLpINClW9xi0kQWuvAQF6QjYvb7xIeTOjD3CWkienTvie0EBDDSeaOxtfWdQwjWE2L2tcEGXzoDX4iucfzOwjZpwbfUCVx1C70vdPgK4AfMWsz05f9JS83JD2Zj90Z3qOOPem+uCX09SmoC3P4tmZLqCVmBZhJPZWAZ4ShtqzZsZr/NUDKQ1a+GT/5S/fOdp6dt2+P5u37L+yFQEGIggsP66b+SKUaQHipUQcMZUQkGTnmrUPNNHeDx0DkNYE7TnIRVDrFU4n5QkvrZ7xKXCAssHuELJB4ZvW7uCuoWFDefy7xftfn//I7l/b3jt4vvu5gRqPfgt3p3TvUw837Pvo6Xs3AAHDLJ9a13WlzqvzUko31lVdJjZg3OgCYieBFYxOhhHko1vdAlBUWJVCJQYouETl/aGlfB2ETU1dOCbSH/HCwoZN6+bVf9HSE9ZGlps4QAOhs2hRKAXWMirplAS5wM57+1DLN1EQga+zNwKyQAYHWgm+FgLjUIpxJ0BoAFsadueNAFcaRuDAWFBUhgUU4GugPIJzwGQgKmU6KmH4vz2g7R9lm4pbO/Z6YQAAAABJRU5ErkJggg==" InformativeScreenshot="c4d73301ff54b878f63b6110a8db045c.png" Selector="&lt;html app='firefox.exe' title='ACME System 1 - Work Items' /&gt;" Title="ACME System 1 - Work Items" Url="[in_Actions_URL]" />
+        <uix:TargetApp Area="-1525, 358, 1275, 674" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEAElEQVR42r3TW4hVVRjA8f+31t5n5syMdkancogyNfOGmmkQWZIEBZERiqlgEAk9RI8RUVZ080Lmgy9iPRQ+9CKYlBFI4q0E0Ya0GAMvqdGMMpfj3M6Z2XuvtRoP+5wzDrPNaeb0g7XZD5vNf62PJWxqugzUA47/lwCdHnAfRS5+iFAZDpyAUDTBA64DGQAiC4GpVEB5gzU+aMBSOAGFAL0RzyyYtGflnMx3l7JBreW/UYAFjIWUpsA4cA7qq3XQloumbT9+dSMB4Il4AFhAQ62vdwEHqbCUrzYGfRH4GkWRJ1wfMHOpsLmTq+dYAEWBoshClRbLOHlj6ZTpB850/Hy8JbcLyoxxZtjIyizjY8uyxoZ7tp+5cKo5+9jhQy2v+p76llhfaEgM8IWSr3/v/HzHibamrYdbmpqu5XeQ4Ifz3Ue3Hmk5ufNU25ltx65uADhyNf+sOZeFmRlIaz4+1rqCmEWSA0Qoac9F6/O5cBGDK5uL1pKgIx89QS5c0p0L5xvjHoeC3TMenQIXuiCy7F09/UMSKBKktDqNFtAK35PfSFClxaAVaKH+Dv8SZfLuqumr3lo/ax7wPrE6X91eAA5FmSKZwlEQhE642V6geemUOiGmVOIIxi40liITWrftp1a34+jfbslXZ7cTqx73AMER01pR1NEfke8OyQ2ua31RSEwrxjkAhBFkqjRUa0hrJlXrHDHHOAcII3Ou+BK/j/YWiHC7HGOgknbTH1pBAIHI4kjgKwwAAvnAyJgCrKPE96UG6yC0TEypARL0Rc5HCxiordY1YwroDh1FK2dnLpINClW9xi0kQWuvAQF6QjYvb7xIeTOjD3CWkienTvie0EBDDSeaOxtfWdQwjWE2L2tcEGXzoDX4iucfzOwjZpwbfUCVx1C70vdPgK4AfMWsz05f9JS83JD2Zj90Z3qOOPem+uCX09SmoC3P4tmZLqCVmBZhJPZWAZ4ShtqzZsZr/NUDKQ1a+GT/5S/fOdp6dt2+P5u37L+yFQEGIggsP66b+SKUaQHipUQcMZUQkGTnmrUPNNHeDx0DkNYE7TnIRVDrFU4n5QkvrZ7xKXCAssHuELJB4ZvW7uCuoWFDefy7xftfn//I7l/b3jt4vvu5gRqPfgt3p3TvUw837Pvo6Xs3AAHDLJ9a13WlzqvzUko31lVdJjZg3OgCYieBFYxOhhHko1vdAlBUWJVCJQYouETl/aGlfB2ETU1dOCbSH/HCwoZN6+bVf9HSE9ZGlps4QAOhs2hRKAXWMirplAS5wM57+1DLN1EQga+zNwKyQAYHWgm+FgLjUIpxJ0BoAFsadueNAFcaRuDAWFBUhgUU4GugPIJzwGQgKmU6KmH4vz2g7R9lm4pbO/Z6YQAAAABJRU5ErkJggg==" InformativeScreenshot="c4d73301ff54b878f63b6110a8db045c.png" Selector="&lt;html app='firefox.exe' title='ACME System 1*' /&gt;" Title="ACME System 1 - Work Items" Url="[in_ACME_URL]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
     <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Firefox: ACME System 1" sap:VirtualizedContainerService.HintSize="450,1288" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="6e55a4b9-88f1-4bfe-8261-125bb2b46f8b" Version="V2">
