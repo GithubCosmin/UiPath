@@ -1,0 +1,451 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Acme_Close" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ACME_URL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1096,2458</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Acme_Close_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.WorkflowEvents.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Acme_Close" sap:VirtualizedContainerService.HintSize="708,2393" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="exists" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646,2305" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Firefox: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="608,2054" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="64c3c230-4a7c-407a-9bbe-7a0493b4eed4" Timeout="5" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,1837" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Activate DelayBefore="{x:Null}" DelayMS="1" sap:VirtualizedContainerService.HintSize="512,127" sap2010:WorkflowViewState.IdRef="Activate_1">
+                  <ui:Activate.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9f5d0550-e330-4259-8aa8-a951b3e03fc0">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Activate.Target>
+                </ui:Activate>
+                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayAfter="2" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="512,197" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64c3c230-4a7c-407a-9bbe-7a0493b4eed4" Timeout="3" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items" CvTextArea="1486, 111, 53, 16" CvTextArgument="Log Out" CvType="Text" DesignTimeRectangle="1472, 93, 81, 50" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log Out' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' tag='A' type='' class='' check:text='Log Out' /&gt;" Guid="931b7fb1-9716-461d-95bd-55677b77c046" InformativeScreenshot="c5fa1ebe63fbd1904c8de1ccacce8431.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <Sequence DisplayName=" Validate Logout" sap:VirtualizedContainerService.HintSize="512,1428" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="3337727b-9dbe-4425-9cf3-fac0d7d71ec7" DisplayName="CV Screen Scope 'firefox.exe ACME'" sap:VirtualizedContainerService.HintSize="450,518" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+                    <p:CVScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Login' (63,178,87,38)&quot;]" DesignTimeCacheId="3337727b-9dbe-4425-9cf3-fac0d7d71ec7" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="400,160" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="b8acc5b3ae74f3c0d5a5dab354caaa9f" NumberOfScrolls="2" Result="[exists]" ScrollDirection="None" Version="V6">
+                            <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                              <uc:CvDescriptor Id="70c65e4e-4a22-49d5-bb6f-f8a60de00a6e">
+                                <uc:CvDescriptor.Target>
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="63, 178, 87, 38" ElementType="Text" Text="Login" />
+                                </uc:CvDescriptor.Target>
+                              </uc:CvDescriptor>
+                            </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                          </p:CvElementExistsWithDescriptor>
+                        </Sequence>
+                      </ActivityAction>
+                    </p:CVScope.Body>
+                    <p:CVScope.DesignTimeCache>
+                      <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                    </p:CVScope.DesignTimeCache>
+                    <p:CVScope.DesignTimeCacheContainer>
+                      <uc:CvCacheContainer>
+                        <uc:CvCacheContainer.Caches>
+                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                            <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - 'Lo (Main)" Id="3337727b-9dbe-4425-9cf3-fac0d7d71ec7" InformativeScreenshot="dc3987b4d8a53bb055d3c53d32c5a3ea" LogicalPosition="-1566, 330" OcrText="Calculate Client Security Hash X FL Browse Torrents :: FileList X Ui Browser Closes on Default - Hel X Ui ACME System 1 - Log In X + v _ X https://acme-test.uipath.com/login w ACME System 1 Home Switch to new theme Log In Login Home / Login To continue, please authenticate here Email: cosmin.posirca@yahoo.com Password: Remember Me Login Forgot Your Password? Register" Position="-1566, 330" ScreenshotGuid="b2018a94-fb53-4983-8223-f3a53da66be3" ServerVersion="1">
+                              <uc:CVCache.CvAnchorRelations>
+                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="8">
+                                  <uc:AnchorRelationInfo IsTargetText="True" Target="9">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>6</x:Int32>
+                                        <x:Int32>7</x:Int32>
+                                        <x:Int32>8</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                  <uc:AnchorRelationInfo IsTargetText="False" Target="6">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>31</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                  <uc:AnchorRelationInfo IsTargetText="True" Target="53">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>52</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                  <uc:AnchorRelationInfo IsTargetText="False" Target="8">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>55</x:Int32>
+                                        <x:Int32>56</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                  <uc:AnchorRelationInfo IsTargetText="False" Target="4">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>54</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                  <uc:AnchorRelationInfo IsTargetText="False" Target="35">
+                                    <uc:AnchorRelationInfo.Anchors>
+                                      <x:Array Type="x:Int32">
+                                        <x:Int32>46</x:Int32>
+                                      </x:Array>
+                                    </uc:AnchorRelationInfo.Anchors>
+                                  </uc:AnchorRelationInfo>
+                                </scg:List>
+                              </uc:CVCache.CvAnchorRelations>
+                              <uc:CVCache.CvUiElements>
+                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                  <uc:CvElementInfo Category="Icon" Region="1158, 52, 21, 22" />
+                                  <uc:CvElementInfo Category="Button" Region="131, 545, 65, 37" />
+                                  <uc:CvElementInfo Category="Icon" Region="241, 52, 20, 22" />
+                                  <uc:CvElementInfo Category="Button" Region="374, 545, 82, 37" />
+                                  <uc:CvElementInfo Category="InputBox" Region="130, 454, 489, 37" />
+                                  <uc:CvElementInfo Category="Icon" Region="1085, 53, 21, 21" />
+                                  <uc:CvElementInfo Category="InputBox" Region="203, 46, 753, 36" />
+                                  <uc:CvElementInfo Category="Icon" Region="1229, 54, 21, 18" />
+                                  <uc:CvElementInfo Category="CheckBox" Region="131, 507, 17, 17" />
+                                  <uc:CvElementInfo Category="Icon" Region="923, 53, 22, 22" />
+                                  <uc:CvElementInfo Category="Icon" Region="318, 11, 22, 21" />
+                                  <uc:CvElementInfo Category="Icon" Region="85, 53, 23, 22" />
+                                  <uc:CvElementInfo Category="Button" Region="195, 545, 177, 37" />
+                                  <uc:CvElementInfo Category="Icon" Region="212, 52, 21, 22" />
+                                  <uc:CvElementInfo Category="Icon" Region="543, 10, 22, 22" />
+                                  <uc:CvElementInfo Category="InputBox" Region="133, 380, 486, 37" />
+                                  <uc:CvElementInfo Category="Icon" Region="1122, 54, 21, 20" />
+                                  <uc:CvElementInfo Category="MinimizeButton" Region="1138, 12, 22, 18" />
+                                  <uc:CvElementInfo Category="Icon" Region="768, 11, 22, 21" />
+                                  <uc:CvElementInfo Category="ArrowButton" Region="1054, 11, 23, 20" />
+                                  <uc:CvElementInfo Category="Icon" Region="1194, 53, 21, 22" />
+                                  <uc:CvElementInfo Category="Icon" Region="49, 10, 24, 23" />
+                                  <uc:CvElementInfo Category="MaximizeButton" Region="1185, 12, 20, 20" />
+                                  <uc:CvElementInfo Category="Icon" Region="995, 12, 21, 21" />
+                                  <uc:CvElementInfo Category="Icon" Region="93, 13, 21, 18" />
+                                  <uc:CvElementInfo Category="CloseButton" Region="1231, 12, 19, 19" />
+                                  <uc:CvElementInfo Category="CloseButton" Region="509, 13, 17, 17" />
+                                  <uc:CvElementInfo Category="CloseButton" Region="284, 13, 17, 17" />
+                                  <uc:CvElementInfo Category="Icon" Region="1050, 54, 21, 19" />
+                                  <uc:CvElementInfo Category="CloseButton" Region="959, 13, 17, 18" />
+                                  <uc:CvElementInfo Category="CloseButton" Region="735, 14, 16, 16" />
+                                  <uc:CvElementInfo Category="Button" Region="763, 3, 221, 38" />
+                                  <uc:CvElementInfo Category="Icon" Region="49, 53, 23, 22" />
+                                  <uc:CvElementInfo Category="Icon" Region="12, 53, 25, 23" />
+                                  <uc:CvElementInfo Category="Button" Region="83, 2, 233, 42" />
+                                  <uc:CvElementInfo Category="InputBox" Region="61, 243, 1145, 37" />
+                                  <uc:CvElementInfo Category="Button" Region="536, 3, 225, 39" />
+                                  <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="134, 415, 485, 23" />
+                                  <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="12, 53, 25, 22" />
+                                  <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="762, 3, 223, 37" />
+                                  <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="48, 53, 24, 22" />
+                                  <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="313, 5, 212, 36" />
+                                  <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="4, 1, 80, 44" />
+                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="281, 12, 21, 21" />
+                                  <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1049, 54, 21, 20" />
+                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1139, 13, 21, 17" />
+                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="960, 13, 17, 17" />
+                                  <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="284, 13, 19, 19" />
+                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="510, 13, 17, 17" />
+                                  <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="735, 14, 16, 17" />
+                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1156, 83, 107, 51" />
+                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="935, 84, 72, 52" />
+                                  <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="135, 435, 485, 19" />
+                                </scg:List>
+                              </uc:CVCache.CvUiElements>
+                              <uc:CVCache.OcrTexts>
+                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="62">
+                                  <uc:OcrTextInfo Region="117, 16, 51, 12" Text="Calculate" />
+                                  <uc:OcrTextInfo Region="169, 16, 33, 12" Text="Client" />
+                                  <uc:OcrTextInfo Region="203, 16, 44, 15" Text="Security" />
+                                  <uc:OcrTextInfo Region="248, 16, 28, 12" Text="Hash" />
+                                  <uc:OcrTextInfo Region="287, 16, 11, 11" Text="X" />
+                                  <uc:OcrTextInfo Region="322, 17, 12, 9" Text="FL" />
+                                  <uc:OcrTextInfo Region="342, 16, 40, 12" Text="Browse" />
+                                  <uc:OcrTextInfo Region="382, 16, 44, 12" Text="Torrents" />
+                                  <uc:OcrTextInfo Region="427, 18, 9, 10" Text="::" />
+                                  <uc:OcrTextInfo Region="437, 16, 38, 12" Text="FileList" />
+                                  <uc:OcrTextInfo Region="512, 16, 11, 11" Text="X" />
+                                  <uc:OcrTextInfo Region="547, 16, 13, 11" Text="Ui" />
+                                  <uc:OcrTextInfo Region="567, 16, 44, 12" Text="Browser" />
+                                  <uc:OcrTextInfo Region="612, 16, 36, 12" Text="Closes" />
+                                  <uc:OcrTextInfo Region="649, 19, 15, 9" Text="on" />
+                                  <uc:OcrTextInfo Region="666, 16, 40, 12" Text="Default" />
+                                  <uc:OcrTextInfo Region="707, 18, 6, 9" Text="-" />
+                                  <uc:OcrTextInfo Region="715, 16, 18, 12" Text="Hel" />
+                                  <uc:OcrTextInfo Region="737, 16, 11, 11" Text="X" />
+                                  <uc:OcrTextInfo Region="772, 16, 13, 11" Text="Ui" />
+                                  <uc:OcrTextInfo Region="791, 16, 36, 12" Text="ACME" />
+                                  <uc:OcrTextInfo Region="827, 16, 41, 15" Text="System" />
+                                  <uc:OcrTextInfo Region="869, 16, 7, 12" Text="1" />
+                                  <uc:OcrTextInfo Region="877, 18, 7, 10" Text="-" />
+                                  <uc:OcrTextInfo Region="886, 16, 21, 15" Text="Log" />
+                                  <uc:OcrTextInfo Region="909, 16, 12, 12" Text="In" />
+                                  <uc:OcrTextInfo Region="962, 16, 11, 11" Text="X" />
+                                  <uc:OcrTextInfo Region="998, 15, 14, 14" Text="+" />
+                                  <uc:OcrTextInfo Region="1058, 16, 15, 10" Text="v" />
+                                  <uc:OcrTextInfo Region="1142, 11, 13, 13" Text="_" />
+                                  <uc:OcrTextInfo Region="1234, 15, 13, 13" Text="X" />
+                                  <uc:OcrTextInfo Region="268, 57, 214, 17" Text="https://acme-test.uipath.com/login" />
+                                  <uc:OcrTextInfo Region="1198, 58, 10, 8" Text="w" />
+                                  <uc:OcrTextInfo Region="60, 101, 55, 16" Text="ACME" />
+                                  <uc:OcrTextInfo Region="118, 101, 62, 20" Text="System" />
+                                  <uc:OcrTextInfo Region="184, 101, 9, 16" Text="1" />
+                                  <uc:OcrTextInfo Region="939, 103, 38, 13" Text="Home" />
+                                  <uc:OcrTextInfo Region="1005, 102, 41, 14" Text="Switch" />
+                                  <uc:OcrTextInfo Region="1048, 103, 15, 13" Text="to" />
+                                  <uc:OcrTextInfo Region="1065, 105, 27, 11" Text="new" />
+                                  <uc:OcrTextInfo Region="1094, 103, 41, 13" Text="theme" />
+                                  <uc:OcrTextInfo Region="1163, 103, 25, 16" Text="Log" />
+                                  <uc:OcrTextInfo Region="1191, 103, 12, 13" Text="In" />
+                                  <uc:OcrTextInfo Region="63, 178, 87, 38" Text="Login" />
+                                  <uc:OcrTextInfo Region="77, 256, 38, 13" Text="Home" />
+                                  <uc:OcrTextInfo Region="121, 256, 8, 13" Text="/" />
+                                  <uc:OcrTextInfo Region="135, 256, 36, 16" Text="Login" />
+                                  <uc:OcrTextInfo Region="131, 323, 28, 20" Text="To" />
+                                  <uc:OcrTextInfo Region="163, 322, 98, 24" Text="continue," />
+                                  <uc:OcrTextInfo Region="267, 323, 73, 25" Text="please" />
+                                  <uc:OcrTextInfo Region="345, 323, 133, 21" Text="authenticate" />
+                                  <uc:OcrTextInfo Region="482, 323, 50, 20" Text="here" />
+                                  <uc:OcrTextInfo Region="132, 360, 42, 13" Text="Email:" />
+                                  <uc:OcrTextInfo Region="137, 421, 153, 15" Text="cosmin.posirca@yahoo.com" />
+                                  <uc:OcrTextInfo Region="133, 436, 72, 11" Text="Password:" />
+                                  <uc:OcrTextInfo Region="150, 510, 78, 13" Text="Remember" />
+                                  <uc:OcrTextInfo Region="230, 510, 23, 13" Text="Me" />
+                                  <uc:OcrTextInfo Region="145, 556, 37, 17" Text="Login" />
+                                  <uc:OcrTextInfo Region="210, 557, 44, 16" Text="Forgot" />
+                                  <uc:OcrTextInfo Region="255, 557, 32, 13" Text="Your" />
+                                  <uc:OcrTextInfo Region="289, 556, 71, 14" Text="Password?" />
+                                  <uc:OcrTextInfo Region="388, 557, 55, 16" Text="Register" />
+                                </scg:List>
+                              </uc:CVCache.OcrTexts>
+                            </uc:CVCache>
+                          </scg:List>
+                        </uc:CvCacheContainer.Caches>
+                      </uc:CvCacheContainer>
+                    </p:CVScope.DesignTimeCacheContainer>
+                    <p:CVScope.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                      </ActivityFunc>
+                    </p:CVScope.OCREngine>
+                    <p:CVScope.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c04b04a-78ce-417e-80c4-b8236243c796" InformativeScreenshot="6e001d16b2d5841f06eda2d980b6c7f4" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </p:CVScope.Target>
+                    <p:CVScope.UseLocalServer>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </p:CVScope.UseLocalServer>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p:CVScope>
+                  <If Condition="[exists]" sap:VirtualizedContainerService.HintSize="450,795" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Success LogOut Acme System&quot;]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,381" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed LogOut Acme System&quot;]" />
+                        <Throw Exception="[new Exception(&quot;Login to Acme is not working&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEAElEQVR42r3TW4hVVRjA8f+31t5n5syMdkancogyNfOGmmkQWZIEBZERiqlgEAk9RI8RUVZ080Lmgy9iPRQ+9CKYlBFI4q0E0Ya0GAMvqdGMMpfj3M6Z2XuvtRoP+5wzDrPNaeb0g7XZD5vNf62PJWxqugzUA47/lwCdHnAfRS5+iFAZDpyAUDTBA64DGQAiC4GpVEB5gzU+aMBSOAGFAL0RzyyYtGflnMx3l7JBreW/UYAFjIWUpsA4cA7qq3XQloumbT9+dSMB4Il4AFhAQ62vdwEHqbCUrzYGfRH4GkWRJ1wfMHOpsLmTq+dYAEWBoshClRbLOHlj6ZTpB850/Hy8JbcLyoxxZtjIyizjY8uyxoZ7tp+5cKo5+9jhQy2v+p76llhfaEgM8IWSr3/v/HzHibamrYdbmpqu5XeQ4Ifz3Ue3Hmk5ufNU25ltx65uADhyNf+sOZeFmRlIaz4+1rqCmEWSA0Qoac9F6/O5cBGDK5uL1pKgIx89QS5c0p0L5xvjHoeC3TMenQIXuiCy7F09/UMSKBKktDqNFtAK35PfSFClxaAVaKH+Dv8SZfLuqumr3lo/ax7wPrE6X91eAA5FmSKZwlEQhE642V6geemUOiGmVOIIxi40liITWrftp1a34+jfbslXZ7cTqx73AMER01pR1NEfke8OyQ2ua31RSEwrxjkAhBFkqjRUa0hrJlXrHDHHOAcII3Ou+BK/j/YWiHC7HGOgknbTH1pBAIHI4kjgKwwAAvnAyJgCrKPE96UG6yC0TEypARL0Rc5HCxiordY1YwroDh1FK2dnLpINClW9xi0kQWuvAQF6QjYvb7xIeTOjD3CWkienTvie0EBDDSeaOxtfWdQwjWE2L2tcEGXzoDX4iucfzOwjZpwbfUCVx1C70vdPgK4AfMWsz05f9JS83JD2Zj90Z3qOOPem+uCX09SmoC3P4tmZLqCVmBZhJPZWAZ4ShtqzZsZr/NUDKQ1a+GT/5S/fOdp6dt2+P5u37L+yFQEGIggsP66b+SKUaQHipUQcMZUQkGTnmrUPNNHeDx0DkNYE7TnIRVDrFU4n5QkvrZ7xKXCAssHuELJB4ZvW7uCuoWFDefy7xftfn//I7l/b3jt4vvu5gRqPfgt3p3TvUw837Pvo6Xs3AAHDLJ9a13WlzqvzUko31lVdJjZg3OgCYieBFYxOhhHko1vdAlBUWJVCJQYouETl/aGlfB2ETU1dOCbSH/HCwoZN6+bVf9HSE9ZGlps4QAOhs2hRKAXWMirplAS5wM57+1DLN1EQga+zNwKyQAYHWgm+FgLjUIpxJ0BoAFsadueNAFcaRuDAWFBUhgUU4GugPIJzwGQgKmU6KmH4vz2g7R9lm4pbO/Z6YQAAAABJRU5ErkJggg==" InformativeScreenshot="614aa988f14bb47749322545469ec193.png" Selector="&lt;html app='firefox.exe' title='ACME System 1*' /&gt;" Title="ACME System 1 - Dashboard" Url="[in_ACME_URL]" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="612,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Trying to kill Acme but probably closed already&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
