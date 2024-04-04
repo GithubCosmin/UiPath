@@ -64,6 +64,18 @@
       "AddedNamespaces": null
     },
     {
+      "Path": "Sha1/GetHashCode.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_ClientInformation",
+        "out_HashResult",
+        "in_SHA1_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
@@ -119,7 +131,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_ACME_URL"
+        "in_ACME_URL",
+        "in_SHA1_URL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -137,7 +150,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_ACME_URL"
+        "in_ACME_URL",
+        "in_SHA1_URL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -150,6 +164,16 @@
       ],
       "ArgumentsSectionElementsOrder": [
         "in_ACME_URL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sha1/Sha1_CloseBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_SHA1_URL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -169,17 +193,11 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Framework/InitAllSettings.xaml",
+      "Path": "Acme/GoToWorkItems.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_SettingsAndConstants&Sequence_5",
-        "dt_Assets&Sequence_6",
-        "AssetValue&Sequence_11"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_ConfigFile",
-        "in_ConfigSheets",
-        "out_Config"
+        "in_ACME_URL"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

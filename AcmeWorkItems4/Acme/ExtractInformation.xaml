@@ -1,14 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ExtractInformation" this:ExtractInformation.in_ACTIONS_URL="https://acme-test.uipath.com/work-items/99178452" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ACTIONS_URL" Type="InArgument(x:String)" />
-    <x:Property Name="out_ClientId" Type="OutArgument(x:String)" />
-    <x:Property Name="out_ClientName" Type="OutArgument(x:String)" />
-    <x:Property Name="out_ClientCountry" Type="OutArgument(x:String)" />
+    <x:Property Name="out_TaxId" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1096,1512</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1096,1120</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,19 +108,19 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractInformation" sap:VirtualizedContainerService.HintSize="512,1447" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractInformation" sap:VirtualizedContainerService.HintSize="512,1055" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,1065" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Background" OpenMode="Never" ScopeGuid="26e60bd4-fe84-4f1f-a885-99b03956b4e9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,673" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Background" OpenMode="Never" ScopeGuid="26e60bd4-fe84-4f1f-a885-99b03956b4e9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,808" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,416" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,34 +138,12 @@
                 </ui:Target>
               </ui:Activate.Target>
             </ui:Activate>
-            <uix:NGetText DisplayName="Get Client Id" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="26e60bd4-fe84-4f1f-a885-99b03956b4e9" ScrapingMethod="Fulltext" TextString="[out_ClientId]" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'France'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="26e60bd4-fe84-4f1f-a885-99b03956b4e9" TextString="[out_TaxId]" Version="V3">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="232, 413, 67, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name=' RW82952' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="510681ba-834f-4f95-9dea-9f29e6f12442" InformativeScreenshot="60e3a548d8f284e043cbd0d5da09732d.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='ACME System 1 - Work Items — Mozilla Firefox' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
+                <uix:TargetAnchorable DesignTimeRectangle="540, 427, 73, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name=' RO345879' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="b2782de7-bf5d-4d07-96a8-b6a11f3b7f54" InformativeScreenshot="3cc49414f0c88d66ba075f5ce35e4ef9.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='ACME System 1 - Work Items — Mozilla Firefox' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="169, 413, 63, 16" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client ID:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client ID:' role='editable text' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NGetText.Target>
-            </uix:NGetText>
-            <uix:NGetText DisplayName="Get Client Name" sap:VirtualizedContainerService.HintSize="354,197" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="26e60bd4-fe84-4f1f-a885-99b03956b4e9" TextString="[out_ClientName]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="257, 439, 78, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name=' Craig Tober' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="f913d2c1-c565-4c27-8207-30a7ae566bfa" InformativeScreenshot="763985bd9d8a35aa2aaf4e4ed49da091.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='ACME System 1 - Work Items — Mozilla Firefox' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="169, 439, 88, 16" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client Name:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client Name:' role='editable text' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NGetText.Target>
-            </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'France'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="26e60bd4-fe84-4f1f-a885-99b03956b4e9" TextString="[out_ClientCountry]" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="273, 459, 49, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name=' France' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="faf0435b-2508-4257-a3cb-4599ef7dd15b" InformativeScreenshot="61409a93add817a164baa6c3cb17736d.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='ACME System 1 - Work Items — Mozilla Firefox' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V3" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="169, 459, 104, 16" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client Country:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='Client Country:' role='editable text' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="499, 427, 41, 16" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='TaxID:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='ACME System 1 - Work Items' role='document' /&gt;&lt;ctrl name='TaxID:' role='editable text' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -181,6 +157,6 @@
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Extracted Client Data&quot;]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_ClientId + out_ClientName + out_ClientCountry]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_TaxId]" />
   </Sequence>
 </Activity>
